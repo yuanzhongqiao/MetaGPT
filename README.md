@@ -1,190 +1,173 @@
-
-# MetaGPT: The Multi-Agent Framework
-
-<p align="center">
-<a href=""><img src="docs/resources/MetaGPT-new-log.png" alt="MetaGPT logo: Enable GPT to work in software company, collaborating to tackle more complex tasks." width="150px"></a>
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MetaGPT：多代理框架</font></font></h1><a id="user-content-metagpt-the-multi-agent-framework" class="anchor" aria-label="永久链接：MetaGPT：多代理框架" href="#metagpt-the-multi-agent-framework"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p align="center" dir="auto">
+<a href="https://github.com/geekan/MetaGPT/blob/main"><img src="https://github.com/geekan/MetaGPT/raw/main/docs/resources/MetaGPT-new-log.png" alt="MetaGPT 徽标：使 GPT 能够在软件公司工作，协作解决更复杂的任务。" width="150px" style="max-width: 100%;"></a>
 </p>
-
-<p align="center">
-<b>Assign different roles to GPTs to form a collaborative entity for complex tasks.</b>
+<p align="center" dir="auto">
+<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为GPT分配不同的角色，形成一个协作实体来完成复杂的任务。</font></font></b>
 </p>
-
-<p align="center">
-<a href="docs/README_CN.md"><img src="https://img.shields.io/badge/文档-中文版-blue.svg" alt="CN doc"></a>
-<a href="README.md"><img src="https://img.shields.io/badge/document-English-blue.svg" alt="EN doc"></a>
-<a href="docs/README_JA.md"><img src="https://img.shields.io/badge/ドキュメント-日本語-blue.svg" alt="JA doc"></a>
-<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
-<a href="docs/ROADMAP.md"><img src="https://img.shields.io/badge/ROADMAP-路线图-blue" alt="roadmap"></a>
-<a href="https://discord.gg/DYn29wFk9z"><img src="https://dcbadge.vercel.app/api/server/DYn29wFk9z?style=flat" alt="Discord Follow"></a>
-<a href="https://twitter.com/MetaGPT_"><img src="https://img.shields.io/twitter/follow/MetaGPT?style=social" alt="Twitter Follow"></a>
+<p align="center" dir="auto">
+<a href="/geekan/MetaGPT/blob/main/docs/README_CN.md"><img src="https://camo.githubusercontent.com/65001f5861138111b7707e627a1ac0b4ad04c4657463c6da89713f81ed2b7b8b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652fe69687e6a1a32de4b8ade69687e789882d626c75652e737667" alt="中文文档" data-canonical-src="https://img.shields.io/badge/文档-中文版-blue.svg" style="max-width: 100%;"></a>
+<a href="/geekan/MetaGPT/blob/main/README.md"><img src="https://camo.githubusercontent.com/5cbf374fa3b190b4f3e189de5dc55033bfdaac3de69bb1d63de8b9d899bd58ea/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f646f63756d656e742d456e676c6973682d626c75652e737667" alt="在文档中" data-canonical-src="https://img.shields.io/badge/document-English-blue.svg" style="max-width: 100%;"></a>
+<a href="/geekan/MetaGPT/blob/main/docs/README_JA.md"><img src="https://camo.githubusercontent.com/ff1411f086a1bfc5c057b11d4d01ba1dc4a85762cda9df4533486ffe906ff9b2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652fe38389e382ade383a5e383a1e383b3e383882de697a5e69cace8aa9e2d626c75652e737667" alt="我医生" data-canonical-src="https://img.shields.io/badge/ドキュメント-日本語-blue.svg" style="max-width: 100%;"></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://camo.githubusercontent.com/6552afb9038154d801c50b6e55a76db78a6787a8d6e2b5252a44864503c52887/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d626c75652e737667" alt="许可证：麻省理工学院" data-canonical-src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;"></a>
+<a href="/geekan/MetaGPT/blob/main/docs/ROADMAP.md"><img src="https://camo.githubusercontent.com/8bc202c9f6879a3ba0df1c1617ff559010ac137ea75a81e2dbc976bd9b999e1d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f524f41444d41502de8b7afe7babfe59bbe2d626c7565" alt="路线图" data-canonical-src="https://img.shields.io/badge/ROADMAP-路线图-blue" style="max-width: 100%;"></a>
+<a href="https://discord.gg/DYn29wFk9z" rel="nofollow"><img src="https://camo.githubusercontent.com/9eae376b195b48c5c0bfc4c56f6c726e835034ceb1a82d82a3c76d7cfdd2ac3d/68747470733a2f2f646362616467652e76657263656c2e6170702f6170692f7365727665722f44596e323977466b397a3f7374796c653d666c6174" alt="不和谐 关注" data-canonical-src="https://dcbadge.vercel.app/api/server/DYn29wFk9z?style=flat" style="max-width: 100%;"></a>
+<a href="https://twitter.com/MetaGPT_" rel="nofollow"><img src="https://camo.githubusercontent.com/e1950a1ddc60d5fe06712e68e9f0ad3bfbecfd336ed0eda0ccdd900e1d5fbe22/68747470733a2f2f696d672e736869656c64732e696f2f747769747465722f666f6c6c6f772f4d6574614750543f7374796c653d736f6369616c" alt="Twitter 关注" data-canonical-src="https://img.shields.io/twitter/follow/MetaGPT?style=social" style="max-width: 100%;"></a>
 </p>
-
-<p align="center">
-   <a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/geekan/MetaGPT"><img src="https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode" alt="Open in Dev Containers"></a>
-   <a href="https://codespaces.new/geekan/MetaGPT"><img src="https://img.shields.io/badge/Github_Codespace-Open-blue?logo=github" alt="Open in GitHub Codespaces"></a>
-   <a href="https://huggingface.co/spaces/deepwisdom/MetaGPT" target="_blank"><img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20-Hugging%20Face-blue?color=blue&logoColor=white" /></a>
+<p align="center" dir="auto">
+   <a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/geekan/MetaGPT" rel="nofollow"><img src="https://camo.githubusercontent.com/6d5646ec334d9594cd61f7dd25e449b60e5b162b8058464952c5262ea3d6d3f5/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f6c6162656c3d446576253230436f6e7461696e657273266d6573736167653d4f70656e26636f6c6f723d626c7565266c6f676f3d76697375616c73747564696f636f6465" alt="在开发容器中打开" data-canonical-src="https://img.shields.io/static/v1?label=Dev%20Containers&amp;message=Open&amp;color=blue&amp;logo=visualstudiocode" style="max-width: 100%;"></a>
+   <a href="https://codespaces.new/geekan/MetaGPT" rel="nofollow"><img src="https://camo.githubusercontent.com/5ebccdd9fd62ceada478c44a83e268b01171aa2c0410cd0397452dd93adee124/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769746875625f436f646573706163652d4f70656e2d626c75653f6c6f676f3d676974687562" alt="在 GitHub Codespaces 中打开" data-canonical-src="https://img.shields.io/badge/Github_Codespace-Open-blue?logo=github" style="max-width: 100%;"></a>
+   <a href="https://huggingface.co/spaces/deepwisdom/MetaGPT" rel="nofollow"><img alt="抱脸" src="https://camo.githubusercontent.com/7c8aae2bc696c5ef893c7c540062f795532f8e3d94526479f1b0bcfca250fd53/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2546302539462541342539372532302d48756767696e67253230466163652d626c75653f636f6c6f723d626c7565266c6f676f436f6c6f723d7768697465" data-canonical-src="https://img.shields.io/badge/%F0%9F%A4%97%20-Hugging%20Face-blue?color=blue&amp;logoColor=white" style="max-width: 100%;"></a>
 </p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">消息</font></font></h2><a id="user-content-news" class="anchor" aria-label="永久链接：新闻" href="#news"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🚀 2024 年 3 月 29 日：</font></font><a href="https://github.com/geekan/MetaGPT/releases/tag/v0.8.0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">v0.8.0</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发布。现在您可以</font><font style="vertical-align: inherit;">通过 pypi 包导入</font><font style="vertical-align: inherit;">使用 Data Interpreter（</font></font><a href="https://arxiv.org/abs/2402.18679" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">arxiv</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://docs.deepwisdom.ai/main/en/DataInterpreter/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">示例</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://github.com/geekan/MetaGPT/tree/main/examples/di"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代码</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）。同时，我们集成了RAG模块并支持多个新的LLM。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🚀 2024年2月8日：</font></font><a href="https://github.com/geekan/MetaGPT/releases/tag/v0.7.0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">v0.7.0</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发布，支持将不同的LLM分配给不同的角色。我们还引入了</font></font><a href="https://github.com/geekan/MetaGPT/blob/main/examples/di/README.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Data Interpreter</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，这是一个能够解决各种现实问题的强大代理。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🚀 2024 年 1 月 16 日：我们的论文</font></font><a href="https://arxiv.org/abs/2308.00352" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">《MetaGPT：多智能体协作框架的元编程》
+</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">被ICLR 2024</font><font style="vertical-align: inherit;">接受</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">口头报告（前 1.2%）</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ，在基于 LLM 的智能体类别中</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">排名第一。</font></font></strong><font style="vertical-align: inherit;"></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🚀 2024年1月3日：</font></font><a href="https://github.com/geekan/MetaGPT/releases/tag/v0.6.0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">v0.6.0</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发布，新功能包括序列化、升级OpenAI包、支持多个LLM、提供</font></font><a href="https://github.com/geekan/MetaGPT/blob/main/examples/debate_simple.py"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最少的辩论示例</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">等。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🚀 2023年12月15日：</font></font><a href="https://github.com/geekan/MetaGPT/releases/tag/v0.5.0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">v0.5.0</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发布，引入了一些实验性功能，例如增量开发、多语言、多种编程语言等。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🔥 2023 年 11 月 8 日：MetaGPT 入选</font></font><a href="https://www.benchcouncil.org/evaluation/opencs/annual.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Open100：开源成就 100 强</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🔥 2023 年 9 月 1 日：MetaGPT在 2023 年 8 月</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">第 17 次</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">位居 GitHub 每月趋势榜首。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🌟 2023 年 6 月 30 日：MetaGPT 现已开源。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🌟 2023 年 4 月 24 日：提交第一行 MetaGPT 代码。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">作为多代理系统的软件公司</font></font></h2><a id="user-content-software-company-as-multi-agent-system" class="anchor" aria-label="永久链接：软件公司作为多代理系统" href="#software-company-as-multi-agent-system"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ol dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MetaGPT 将</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一行需求</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">作为输入并输出</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用户故事/竞争分析/需求/数据结构/API/文档等。</font></font></strong></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在内部，MetaGPT 包括</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">产品经理/架构师/项目经理/工程师。</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">它提供了软件公司的整个流程</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以及精心策划的 SOP。</font></font></strong>
+<ol dir="auto">
+<li><code>Code = SOP(Team)</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是核心理念。我们具体化SOP并将其应用于由法学硕士组成的团队。</font></font></li>
+</ol>
+</li>
+</ol>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/geekan/MetaGPT/blob/main/docs/resources/software_company_cd.jpeg"><img src="/geekan/MetaGPT/raw/main/docs/resources/software_company_cd.jpeg" alt="一家软件公司由 LLM 职位组成" style="max-width: 100%;"></a></p>
+<p align="center" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">软件公司多Agent示意图（逐步实施）</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开始使用</font></font></h2><a id="user-content-get-started" class="anchor" aria-label="永久链接：开始" href="#get-started"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font></h3><a id="user-content-installation" class="anchor" aria-label="永久链接：安装" href="#installation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<blockquote>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">确保您的系统上安装了 Python 3.9+。您可以使用以下命令进行检查</font></font><code>python --version</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+您可以像这样使用 conda：</font></font><code>conda create -n metagpt python=3.9 &amp;&amp; conda activate metagpt</code></p>
+</blockquote>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>pip install --upgrade metagpt
+<span class="pl-c"><span class="pl-c">#</span> or `pip install --upgrade git+https://github.com/geekan/MetaGPT.git`</span>
+<span class="pl-c"><span class="pl-c">#</span> or `git clone https://github.com/geekan/MetaGPT &amp;&amp; cd MetaGPT &amp;&amp; pip install --upgrade -e .`</span></pre><div class="zeroclipboard-container">
+  
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">详细安装指导请参考</font></font><a href="https://docs.deepwisdom.ai/main/en/guide/get_started/installation.html#install-stable-version" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cli_install</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+或</font></font><a href="https://docs.deepwisdom.ai/main/en/guide/get_started/installation.html#install-with-docker" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">docker_install</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">配置</font></font></h3><a id="user-content-configuration" class="anchor" aria-label="永久链接：配置" href="#configuration"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您可以通过运行以下命令来初始化 MetaGPT 的配置，或手动创建</font></font><code>~/.metagpt/config2.yaml</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件：</font></font></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-c"><span class="pl-c">#</span> Check https://docs.deepwisdom.ai/main/en/guide/get_started/configuration.html for more details</span>
+metagpt --init-config  <span class="pl-c"><span class="pl-c">#</span> it will create ~/.metagpt/config2.yaml, just modify it to your needs</span></pre><div class="zeroclipboard-container">
+    
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您可以</font></font><code>~/.metagpt/config2.yaml</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">根据</font></font><a href="https://github.com/geekan/MetaGPT/blob/main/config/config2.example.yaml"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">示例</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><a href="https://docs.deepwisdom.ai/main/en/guide/get_started/configuration.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">进行配置：</font></font></p>
+<div class="highlight highlight-source-yaml notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-ent">llm</span>:
+  <span class="pl-ent">api_type</span>: <span class="pl-s"><span class="pl-pds">"</span>openai<span class="pl-pds">"</span></span>  <span class="pl-c"><span class="pl-c">#</span> or azure / ollama / groq etc. Check LLMType for more options</span>
+  <span class="pl-ent">model</span>: <span class="pl-s"><span class="pl-pds">"</span>gpt-4-turbo<span class="pl-pds">"</span></span>  <span class="pl-c"><span class="pl-c">#</span> or gpt-3.5-turbo</span>
+  <span class="pl-ent">base_url</span>: <span class="pl-s"><span class="pl-pds">"</span>https://api.openai.com/v1<span class="pl-pds">"</span></span>  <span class="pl-c"><span class="pl-c">#</span> or forward url / other llm url</span>
+  <span class="pl-ent">api_key</span>: <span class="pl-s"><span class="pl-pds">"</span>YOUR_API_KEY<span class="pl-pds">"</span></span></pre><div class="zeroclipboard-container">
+     
+  </div></div>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用法</font></font></h3><a id="user-content-usage" class="anchor" aria-label="永久链接：用法" href="#usage"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装后，您可以在 CLI 中使用 MetaGPT</font></font></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>metagpt <span class="pl-s"><span class="pl-pds">"</span>Create a 2048 game<span class="pl-pds">"</span></span>  <span class="pl-c"><span class="pl-c">#</span> this will create a repo in ./workspace</span></pre><div class="zeroclipboard-container">
+   
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或者将其用作库</font></font></p>
+<div class="highlight highlight-source-python notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">from</span> <span class="pl-s1">metagpt</span>.<span class="pl-s1">software_company</span> <span class="pl-k">import</span> <span class="pl-s1">generate_repo</span>, <span class="pl-v">ProjectRepo</span>
+<span class="pl-s1">repo</span>: <span class="pl-v">ProjectRepo</span> <span class="pl-c1">=</span> <span class="pl-en">generate_repo</span>(<span class="pl-s">"Create a 2048 game"</span>)  <span class="pl-c"># or ProjectRepo("&lt;path&gt;")</span>
+<span class="pl-en">print</span>(<span class="pl-s1">repo</span>)  <span class="pl-c"># it will print the repo structure with files</span></pre><div class="zeroclipboard-container">
+    
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您还可以使用</font></font><a href="https://github.com/geekan/MetaGPT/tree/main/examples/di"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Data Interpreter</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编写代码：</font></font></p>
+<div class="highlight highlight-source-python notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">import</span> <span class="pl-s1">asyncio</span>
+<span class="pl-k">from</span> <span class="pl-s1">metagpt</span>.<span class="pl-s1">roles</span>.<span class="pl-s1">di</span>.<span class="pl-s1">data_interpreter</span> <span class="pl-k">import</span> <span class="pl-v">DataInterpreter</span>
 
-## News
-🚀 Mar. 29, 2024: [v0.8.0](https://github.com/geekan/MetaGPT/releases/tag/v0.8.0) released. Now you can use Data Interpreter ([arxiv](https://arxiv.org/abs/2402.18679), [example](https://docs.deepwisdom.ai/main/en/DataInterpreter/), [code](https://github.com/geekan/MetaGPT/tree/main/examples/di)) via pypi package import. Meanwhile, we integrated RAG module and supported multiple new LLMs.
+<span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main</span>():
+    <span class="pl-s1">di</span> <span class="pl-c1">=</span> <span class="pl-v">DataInterpreter</span>()
+    <span class="pl-k">await</span> <span class="pl-s1">di</span>.<span class="pl-en">run</span>(<span class="pl-s">"Run data analysis on sklearn Iris dataset, include a plot"</span>)
 
-🚀 Feb. 08, 2024: [v0.7.0](https://github.com/geekan/MetaGPT/releases/tag/v0.7.0) released, supporting assigning different LLMs to different Roles. We also introduced [Data Interpreter](https://github.com/geekan/MetaGPT/blob/main/examples/di/README.md), a powerful agent capable of solving a wide range of real-world problems.
+<span class="pl-s1">asyncio</span>.<span class="pl-en">run</span>(<span class="pl-en">main</span>())  <span class="pl-c"># or await main() in a jupyter notebook setting</span></pre><div class="zeroclipboard-container">
+    
+  </div></div>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">快速入门和演示视频</font></font></h3><a id="user-content-quickstart--demo-video" class="anchor" aria-label="永久链接：快速入门和演示视频" href="#quickstart--demo-video"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><a href="https://huggingface.co/spaces/deepwisdom/MetaGPT" rel="nofollow"><font style="vertical-align: inherit;">在MetaGPT Huggingface Space</font></a><font style="vertical-align: inherit;">上尝试一下</font></font><a href="https://huggingface.co/spaces/deepwisdom/MetaGPT" rel="nofollow"><font style="vertical-align: inherit;"></font></a></li>
+<li><a href="https://youtu.be/uT75J_KG_aY" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Matthew Berman：如何安装 MetaGPT - 只需一个提示即可创建一家初创公司！</font></font></a></li>
+<li><a href="https://github.com/geekan/MetaGPT/assets/2707039/5e8c1062-8c35-440f-bb20-2b0320f8d27d"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">官方演示视频</font></font></a></li>
+</ul>
+<details open="" class="details-reset border rounded-2">
+  <summary class="px-3 py-2">
+    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-device-camera-video">
+    <path d="M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 2.1v-5.85l-3.5 2.1Z"></path>
+</svg>
+    <span aria-label="视频说明customized_tasks_by_MetaGPT_v2.mp4" class="m-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customized_tasks_by_MetaGPT_v2.mp4</font></font></span>
+    <span class="dropdown-caret"></span>
+  </summary>
 
-🚀 Jan. 16, 2024: Our paper [MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework
-](https://arxiv.org/abs/2308.00352) accepted for **oral presentation (top 1.2%)** at ICLR 2024, **ranking #1** in the LLM-based Agent category.
+  <video src="https://private-user-images.githubusercontent.com/34952977/267860024-34345016-5d13-489d-b9f9-b82ace413419.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTYzNjEyMDAsIm5iZiI6MTcxNjM2MDkwMCwicGF0aCI6Ii8zNDk1Mjk3Ny8yNjc4NjAwMjQtMzQzNDUwMTYtNWQxMy00ODlkLWI5ZjktYjgyYWNlNDEzNDE5Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTIyVDA2NTUwMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTI2ZmUxYjI3ZWE2YTNjM2M3NDhkOWRkMGM5OTZmOGJjNmUxZDQxYmY4YzMyNjA1ZTE4OWZkNjU1ZWFhYWVmYWMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.hVRAGw8E8xmcsOyID_Jg9PMO_eeSULIE5QZRj3VI3Jw" data-canonical-src="https://private-user-images.githubusercontent.com/34952977/267860024-34345016-5d13-489d-b9f9-b82ace413419.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTYzNjEyMDAsIm5iZiI6MTcxNjM2MDkwMCwicGF0aCI6Ii8zNDk1Mjk3Ny8yNjc4NjAwMjQtMzQzNDUwMTYtNWQxMy00ODlkLWI5ZjktYjgyYWNlNDEzNDE5Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTIyVDA2NTUwMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTI2ZmUxYjI3ZWE2YTNjM2M3NDhkOWRkMGM5OTZmOGJjNmUxZDQxYmY4YzMyNjA1ZTE4OWZkNjU1ZWFhYWVmYWMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.hVRAGw8E8xmcsOyID_Jg9PMO_eeSULIE5QZRj3VI3Jw" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">
 
-🚀 Jan. 03, 2024: [v0.6.0](https://github.com/geekan/MetaGPT/releases/tag/v0.6.0) released, new features include serialization, upgraded OpenAI package and supported multiple LLM, provided [minimal example for debate](https://github.com/geekan/MetaGPT/blob/main/examples/debate_simple.py) etc.
+  </video>
+</details>
 
-🚀 Dec. 15, 2023: [v0.5.0](https://github.com/geekan/MetaGPT/releases/tag/v0.5.0) released, introducing some experimental features such as incremental development, multilingual, multiple programming languages, etc.
-
-🔥 Nov. 08, 2023: MetaGPT is selected into [Open100: Top 100 Open Source achievements](https://www.benchcouncil.org/evaluation/opencs/annual.html).
-
-🔥 Sep. 01, 2023: MetaGPT tops GitHub Trending Monthly for the **17th time** in August 2023.
-
-🌟 Jun. 30, 2023: MetaGPT is now open source.
-
-🌟 Apr. 24, 2023: First line of MetaGPT code committed.
-
-## Software Company as Multi-Agent System
-
-1. MetaGPT takes a **one line requirement** as input and outputs **user stories / competitive analysis / requirements / data structures / APIs / documents, etc.**
-2. Internally, MetaGPT includes **product managers / architects / project managers / engineers.** It provides the entire process of a **software company along with carefully orchestrated SOPs.**
-   1. `Code = SOP(Team)` is the core philosophy. We materialize SOP and apply it to teams composed of LLMs.
-
-![A software company consists of LLM-based roles](docs/resources/software_company_cd.jpeg)
-
-<p align="center">Software Company Multi-Agent Schematic (Gradually Implementing)</p>
-
-## Get Started
-
-### Installation
-
-> Ensure that Python 3.9+ is installed on your system. You can check this by using: `python --version`.  
-> You can use conda like this: `conda create -n metagpt python=3.9 && conda activate metagpt`
-
-```bash
-pip install --upgrade metagpt
-# or `pip install --upgrade git+https://github.com/geekan/MetaGPT.git`
-# or `git clone https://github.com/geekan/MetaGPT && cd MetaGPT && pip install --upgrade -e .`
-```
-
-For detailed installation guidance, please refer to [cli_install](https://docs.deepwisdom.ai/main/en/guide/get_started/installation.html#install-stable-version)
- or [docker_install](https://docs.deepwisdom.ai/main/en/guide/get_started/installation.html#install-with-docker)
-
-### Configuration
-
-You can init the config of MetaGPT by running the following command, or manually create `~/.metagpt/config2.yaml` file:
-```bash
-# Check https://docs.deepwisdom.ai/main/en/guide/get_started/configuration.html for more details
-metagpt --init-config  # it will create ~/.metagpt/config2.yaml, just modify it to your needs
-```
-
-You can configure `~/.metagpt/config2.yaml` according to the [example](https://github.com/geekan/MetaGPT/blob/main/config/config2.example.yaml) and [doc](https://docs.deepwisdom.ai/main/en/guide/get_started/configuration.html):
-
-```yaml
-llm:
-  api_type: "openai"  # or azure / ollama / groq etc. Check LLMType for more options
-  model: "gpt-4-turbo"  # or gpt-3.5-turbo
-  base_url: "https://api.openai.com/v1"  # or forward url / other llm url
-  api_key: "YOUR_API_KEY"
-```
-
-### Usage
-
-After installation, you can use MetaGPT at CLI
-
-```bash
-metagpt "Create a 2048 game"  # this will create a repo in ./workspace
-```
-
-or use it as library
-
-```python
-from metagpt.software_company import generate_repo, ProjectRepo
-repo: ProjectRepo = generate_repo("Create a 2048 game")  # or ProjectRepo("<path>")
-print(repo)  # it will print the repo structure with files
-```
-
-You can also use [Data Interpreter](https://github.com/geekan/MetaGPT/tree/main/examples/di) to write code:
-
-```python
-import asyncio
-from metagpt.roles.di.data_interpreter import DataInterpreter
-
-async def main():
-    di = DataInterpreter()
-    await di.run("Run data analysis on sklearn Iris dataset, include a plot")
-
-asyncio.run(main())  # or await main() in a jupyter notebook setting
-```
-
-
-### QuickStart & Demo Video
-- Try it on [MetaGPT Huggingface Space](https://huggingface.co/spaces/deepwisdom/MetaGPT)
-- [Matthew Berman: How To Install MetaGPT - Build A Startup With One Prompt!!](https://youtu.be/uT75J_KG_aY)
-- [Official Demo Video](https://github.com/geekan/MetaGPT/assets/2707039/5e8c1062-8c35-440f-bb20-2b0320f8d27d)
-
-https://github.com/geekan/MetaGPT/assets/34952977/34345016-5d13-489d-b9f9-b82ace413419
-
-## Tutorial
-
-- 🗒 [Online Document](https://docs.deepwisdom.ai/main/en/)
-- 💻 [Usage](https://docs.deepwisdom.ai/main/en/guide/get_started/quickstart.html)  
-- 🔎 [What can MetaGPT do?](https://docs.deepwisdom.ai/main/en/guide/get_started/introduction.html)
-- 🛠 How to build your own agents? 
-  - [MetaGPT Usage & Development Guide | Agent 101](https://docs.deepwisdom.ai/main/en/guide/tutorials/agent_101.html)
-  - [MetaGPT Usage & Development Guide | MultiAgent 101](https://docs.deepwisdom.ai/main/en/guide/tutorials/multi_agent_101.html)
-- 🧑‍💻 Contribution
-  - [Develop Roadmap](docs/ROADMAP.md)
-- 🔖 Use Cases
-  - [Data Interpreter](https://docs.deepwisdom.ai/main/en/guide/use_cases/agent/interpreter/intro.html)
-  - [Debate](https://docs.deepwisdom.ai/main/en/guide/use_cases/multi_agent/debate.html)
-  - [Researcher](https://docs.deepwisdom.ai/main/en/guide/use_cases/agent/researcher.html)
-  - [Recepit Assistant](https://docs.deepwisdom.ai/main/en/guide/use_cases/agent/receipt_assistant.html)
-- ❓ [FAQs](https://docs.deepwisdom.ai/main/en/guide/faq.html)
-
-## Support
-
-### Discord Join US
-
-📢 Join Our [Discord Channel](https://discord.gg/ZRHeExS6xv)! Looking forward to seeing you there! 🎉
-
-### Contributor form
-
-📝 [Fill out the form](https://airtable.com/appInfdG0eJ9J4NNL/pagK3Fh1sGclBvVkV/form) to become a contributor. We are looking forward to your participation!
-
-### Contact Information
-
-If you have any questions or feedback about this project, please feel free to contact us. We highly appreciate your suggestions!
-
-- **Email:** alexanderwu@deepwisdom.ai
-- **GitHub Issues:** For more technical inquiries, you can also create a new issue in our [GitHub repository](https://github.com/geekan/metagpt/issues).
-
-We will respond to all questions within 2-3 business days.
-
-## Citation
-
-To stay updated with the latest research and development, follow [@MetaGPT_](https://twitter.com/MetaGPT_) on Twitter. 
-
-To cite [MetaGPT](https://arxiv.org/abs/2308.00352) or [Data Interpreter](https://arxiv.org/abs/2402.18679) in publications, please use the following BibTeX entries.
-
-```bibtex
-@misc{hong2023metagpt,
-      title={MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework}, 
-      author={Sirui Hong and Mingchen Zhuge and Jonathan Chen and Xiawu Zheng and Yuheng Cheng and Ceyao Zhang and Jinlin Wang and Zili Wang and Steven Ka Shing Yau and Zijuan Lin and Liyang Zhou and Chenyu Ran and Lingfeng Xiao and Chenglin Wu and Jürgen Schmidhuber},
-      year={2023},
-      eprint={2308.00352},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI}
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">教程</font></font></h2><a id="user-content-tutorial" class="anchor" aria-label="永久链接：教程" href="#tutorial"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🗒</font></font><a href="https://docs.deepwisdom.ai/main/en/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在线文档</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">💻</font></font><a href="https://docs.deepwisdom.ai/main/en/guide/get_started/quickstart.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用方法</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🔎 </font></font><a href="https://docs.deepwisdom.ai/main/en/guide/get_started/introduction.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MetaGPT 能做什么？</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🛠 如何建立自己的代理？
+</font></font><ul dir="auto">
+<li><a href="https://docs.deepwisdom.ai/main/en/guide/tutorials/agent_101.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MetaGPT 使用与开发指南 |特工101</font></font></a></li>
+<li><a href="https://docs.deepwisdom.ai/main/en/guide/tutorials/multi_agent_101.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MetaGPT 使用与开发指南 |多代理 101</font></font></a></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🧑&zwj;💻 贡献
+</font></font><ul dir="auto">
+<li><a href="/geekan/MetaGPT/blob/main/docs/ROADMAP.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">制定路线图</font></font></a></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">🔖 使用案例
+</font></font><ul dir="auto">
+<li><a href="https://docs.deepwisdom.ai/main/en/guide/use_cases/agent/interpreter/intro.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据解释器</font></font></a></li>
+<li><a href="https://docs.deepwisdom.ai/main/en/guide/use_cases/multi_agent/debate.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">辩论</font></font></a></li>
+<li><a href="https://docs.deepwisdom.ai/main/en/guide/use_cases/agent/researcher.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">研究员</font></font></a></li>
+<li><a href="https://docs.deepwisdom.ai/main/en/guide/use_cases/agent/receipt_assistant.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">收到助理</font></font></a></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">❓</font></font><a href="https://docs.deepwisdom.ai/main/en/guide/faq.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">常见问题解答</font></font></a></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持</font></font></h2><a id="user-content-support" class="anchor" aria-label="永久链接： 支持" href="#support"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">不和谐 加入我们</font></font></h3><a id="user-content-discord-join-us" class="anchor" aria-label="永久链接：Discord 加入我们" href="#discord-join-us"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">📢 加入我们的</font></font><a href="https://discord.gg/ZRHeExS6xv" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Discord 频道</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">！期待在那与你见面。 🎉</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献者表格</font></font></h3><a id="user-content-contributor-form" class="anchor" aria-label="永久链接：贡献者表格" href="#contributor-form"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">📝</font></font><a href="https://airtable.com/appInfdG0eJ9J4NNL/pagK3Fh1sGclBvVkV/form" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">填写表格</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以成为贡献者。我们期待您的参与！</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">联系信息</font></font></h3><a id="user-content-contact-information" class="anchor" aria-label="永久链接：联系信息" href="#contact-information"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您对此项目有任何疑问或反馈，请随时与我们联系。我们非常感谢您的建议！</font></font></p>
+<ul dir="auto">
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电子邮件：</font></font></strong> <a href="mailto:alexanderwu@deepwisdom.ai"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">alexanderwu@deepwisdom.ai</font></font></a></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GitHub 问题：如需更多技术咨询，您还可以在我们的</font></font></strong><font style="vertical-align: inherit;"></font><a href="https://github.com/geekan/metagpt/issues"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GitHub 存储库</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中创建新问题</font><font style="vertical-align: inherit;">。</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们将在 2-3 个工作日内回复所有问题。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">引文</font></font></h2><a id="user-content-citation" class="anchor" aria-label="永久链接：引用" href="#citation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要了解最新的研究和开发动态，请在 Twitter 上关注</font></font><a href="https://twitter.com/MetaGPT_" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@MetaGPT_</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要在出版物中引用</font></font><a href="https://arxiv.org/abs/2308.00352" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MetaGPT</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或</font></font><a href="https://arxiv.org/abs/2402.18679" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Data Interpreter</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，请使用以下 BibTeX 条目。</font></font></p>
+<div class="highlight highlight-text-bibtex notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">@misc</span>{<span class="pl-en">hong2023metagpt</span>,
+      <span class="pl-s">title</span>=<span class="pl-s"><span class="pl-pds">{</span>MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework<span class="pl-pds">}</span></span>, 
+      <span class="pl-s">author</span>=<span class="pl-s"><span class="pl-pds">{</span>Sirui Hong and Mingchen Zhuge and Jonathan Chen and Xiawu Zheng and Yuheng Cheng and Ceyao Zhang and Jinlin Wang and Zili Wang and Steven Ka Shing Yau and Zijuan Lin and Liyang Zhou and Chenyu Ran and Lingfeng Xiao and Chenglin Wu and Jürgen Schmidhuber<span class="pl-pds">}</span></span>,
+      <span class="pl-s">year</span>=<span class="pl-s"><span class="pl-pds">{</span>2023<span class="pl-pds">}</span></span>,
+      <span class="pl-s">eprint</span>=<span class="pl-s"><span class="pl-pds">{</span>2308.00352<span class="pl-pds">}</span></span>,
+      <span class="pl-s">archivePrefix</span>=<span class="pl-s"><span class="pl-pds">{</span>arXiv<span class="pl-pds">}</span></span>,
+      <span class="pl-s">primaryClass</span>=<span class="pl-s"><span class="pl-pds">{</span>cs.AI<span class="pl-pds">}</span></span>
 }
-@misc{hong2024data,
-      title={Data Interpreter: An LLM Agent For Data Science}, 
-      author={Sirui Hong and Yizhang Lin and Bang Liu and Bangbang Liu and Binhao Wu and Danyang Li and Jiaqi Chen and Jiayi Zhang and Jinlin Wang and Li Zhang and Lingyao Zhang and Min Yang and Mingchen Zhuge and Taicheng Guo and Tuo Zhou and Wei Tao and Wenyi Wang and Xiangru Tang and Xiangtao Lu and Xiawu Zheng and Xinbing Liang and Yaying Fei and Yuheng Cheng and Zongze Xu and Chenglin Wu},
-      year={2024},
-      eprint={2402.18679},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI}
+<span class="pl-k">@misc</span>{<span class="pl-en">hong2024data</span>,
+      <span class="pl-s">title</span>=<span class="pl-s"><span class="pl-pds">{</span>Data Interpreter: An LLM Agent For Data Science<span class="pl-pds">}</span></span>, 
+      <span class="pl-s">author</span>=<span class="pl-s"><span class="pl-pds">{</span>Sirui Hong and Yizhang Lin and Bang Liu and Bangbang Liu and Binhao Wu and Danyang Li and Jiaqi Chen and Jiayi Zhang and Jinlin Wang and Li Zhang and Lingyao Zhang and Min Yang and Mingchen Zhuge and Taicheng Guo and Tuo Zhou and Wei Tao and Wenyi Wang and Xiangru Tang and Xiangtao Lu and Xiawu Zheng and Xinbing Liang and Yaying Fei and Yuheng Cheng and Zongze Xu and Chenglin Wu<span class="pl-pds">}</span></span>,
+      <span class="pl-s">year</span>=<span class="pl-s"><span class="pl-pds">{</span>2024<span class="pl-pds">}</span></span>,
+      <span class="pl-s">eprint</span>=<span class="pl-s"><span class="pl-pds">{</span>2402.18679<span class="pl-pds">}</span></span>,
+      <span class="pl-s">archivePrefix</span>=<span class="pl-s"><span class="pl-pds">{</span>arXiv<span class="pl-pds">}</span></span>,
+      <span class="pl-s">primaryClass</span>=<span class="pl-s"><span class="pl-pds">{</span>cs.AI<span class="pl-pds">}</span></span>
 }
-
-```
-
+</pre><div class="zeroclipboard-container">
+    
+  </div></div>
+</article></div>
